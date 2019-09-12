@@ -1,2 +1,2 @@
 #!/bin/bash
-chgrp -recursive betty holberton */
+chgrp betty : holberton ..
