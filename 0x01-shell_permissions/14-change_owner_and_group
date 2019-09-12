@@ -1,2 +1,2 @@
 #!/bin/bash
-chgrp -reference betty holberton .
+chgrp -reference betty holberton */
