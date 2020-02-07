@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#script that displays the content of the file /etc/passwd
+a=$(cat /etc/passwd | cut -d " " -f 1)
+for i in $a;
+do
+        echo $i
+done
