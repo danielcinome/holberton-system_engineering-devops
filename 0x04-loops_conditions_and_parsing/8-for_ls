@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Bash script
-a=$(find ./* | cut -d "-" -f 2)
+a=$(find . | cut -d "-" -f 2)
 for i in $a;
 do
         echo "$i"
