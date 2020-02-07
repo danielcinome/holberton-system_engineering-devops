@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #Bash script
-ls > list
-a=$(< list cut -d "-" -f 2)
+a=$(find . -type f | cut -d "-" -f 2 | tr -d './')
 for i in $a;
 do
         echo "$i"
