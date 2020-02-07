@@ -3,24 +3,20 @@
 if [ -e "holbertonschool" ]
 then
         echo $"holbertonschool file exists"
-fi
+        #empty
+        if [ -s "holbertonschool" ]
+        then
+                echo $"holbertonschool file is not empty"
+        #not empty
+        else
+                echo $"holbertonschool file is empty"
+        fi
+        #regular
+        if [ -f "holbertonschool" ]
+        then
+                echo $"holbertonschool is a regular file"
+        fi
 #not exist
-if [ ! -e "holbertonschool" ]
-then
+else
         echo $"holbertonschool file does not exist"
-fi
-#empty
-if [ -e "holbertonschool" -a ! -s "holbertonschool" ]
-then
-        echo $"holbertonschool file is empty"
-fi
-#not empty
-if [ -s "holbertonschool" ]
-then
-        echo $"holbertonschool file is not empty"
-fi
-#regular
-if [ -f "holbertonschool" ]
-then
-        echo $"holbertonschool is a regular file"
 fi
