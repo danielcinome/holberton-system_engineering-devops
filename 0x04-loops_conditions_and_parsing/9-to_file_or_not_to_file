@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#exist
 if [ -e "holbertonschool" ]
 then
         echo $"holbertonschool file exists"
