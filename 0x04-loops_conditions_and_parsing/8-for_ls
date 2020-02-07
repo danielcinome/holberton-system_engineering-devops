@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+a=$(find ./* | cut -d "-" -f 2)
+for i in $a;
+do
+        echo "$i"
+done
