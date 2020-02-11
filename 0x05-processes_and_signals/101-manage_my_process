@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# 
+if [ $# != 0 ]
+then
+	if [ "$@" == start ]
+	then
+		echo $$ > /var/run/my_process.pid
+		echo "manage_my_process started"
+	fi
+	if [ "$@" == stop ]
+	then
+		rm -rf /var/run/my_process.pid
+		echo $"manage_my_process stopped"
+	fi
+	if [ "$@" == restart ]
+	then
+		rm -rf /var/run/my_process.pid
+		echo $$ > /var/run/my_process.pid
+		echo $"manage_my_process restarted"
+	fi
+else
+	echo $"Usage: manage_my_process {start|stop|restart}"
+fi
