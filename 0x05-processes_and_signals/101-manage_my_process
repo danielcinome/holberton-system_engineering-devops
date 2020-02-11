@@ -16,7 +16,7 @@ then
 	fi
 	if [ "$@" == restart ]
 	then
-		./manage_my_process &
+		/etc/init.d/manage_my_process stop
 		rm -rf /var/run/my_process.pid
 		echo $$ > /var/run/my_process.pid
 		echo $"manage_my_process restarted"
