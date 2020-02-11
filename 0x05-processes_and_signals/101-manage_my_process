@@ -10,7 +10,6 @@ then
 	fi
 	if [ "$@" == stop ]
 	then
-		pkill -f manage_my_process
 		rm -rf /var/run/my_process.pid
 		echo $"manage_my_process stopped"
 		pkill -f manage_my_process
