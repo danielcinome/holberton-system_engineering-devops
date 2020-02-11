@@ -10,13 +10,13 @@ then
 	fi
 	if [ "$@" == stop ]
 	then
-		/etc/init.d/manage_my_process stop
 		rm -rf /var/run/my_process.pid
 		echo $"manage_my_process stopped"
 	fi
 	if [ "$@" == restart ]
 	then
 		rm -rf /var/run/my_process.pid
+		./manage_my_process &
 		echo $$ > /var/run/my_process.pid
 		echo $"manage_my_process restarted"
 	fi
