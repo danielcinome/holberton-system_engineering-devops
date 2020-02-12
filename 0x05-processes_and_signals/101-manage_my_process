@@ -7,19 +7,19 @@ then
 		./manage_my_process &
 		echo $$ > /var/run/my_process.pid
 		echo $"manage_my_process started"
-	fi
-	if [ "$@" == stop ]
+	elif [ "$@" == stop ]
 	then
 		rm -rf /var/run/my_process.pid
 		echo $"manage_my_process stopped"
 		pkill -f manage_my_process
-	fi
-	if [ "$@" == restart ]
+	elif [ "$@" == restart ]
 	then
 		rm -rf /var/run/my_process.pid
 		echo $"manage_my_process restarted"
 		./manage_my_process &
 		echo $$ > /var/run/my_process.pid
+	else
+		echo $"Usage: manage_my_process {start|stop|restart}"
 	fi
 else
 	echo $"Usage: manage_my_process {start|stop|restart}"
