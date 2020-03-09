@@ -1,1 +1,11 @@
 https://imgur.com/2175SLZ
+- A server is a physical or virtual device that provides computing services, such as storage capacity, CPU, processing capacity among others.
+- Facilitate access to a website without knowing the IP address where it is hosted.
+- Record type A and record type CNAME
+- The web server allows me to bring the resources that the client is asking me, mainly processes the static files.
+- The application server allows me to run the logical programs necessary for the web application, as well as make requests to the database.
+- The database allows me to manage data, store it, organize it, update it, recover data.
+- Depending on the communication protocol, the ports are used so that they can communicate.
+- The system is exposed to failures that may render it inoperative. Additionally, the connection is not secure.
+- These should be calculated with the time that my web application should be available, based on this I can calculate how much downtime it can have.
+- If there is too much traffic it is very necessary to climb because if you do not do so you can leave the service idle. In that case given the previous question we must calculate in what period of time we can make these modifications in the system.
