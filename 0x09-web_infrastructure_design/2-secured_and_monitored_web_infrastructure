@@ -1,1 +1,13 @@
 https://imgur.com/nn9XU7w
+- Like the previous DNS cache. This infrastructure in part is general, not counting routers, ISP and others.
+- Firewalls allow to have a secure system, this protects the devices connected to my network against unwanted
+  access and possible loss of information, Additionally they allow me to deny services.
+- Already this protocol allows me to have a secure connection, this means that I will not have access problems to information,
+  injections and others since the packages that are sent are encrypted.
+- It allows me to observe the metrics of the computer, record it and issue Alerts in case of something unusual or that can make the computer work properly.
+  This can be divided into 2 types of application monitors, and server monitors.
+- Through records that half report on performance or Performance Alerts
+- It is necessary to implement software that allows me to have these metrics in order to know the scalability that the server needs to have.
+- Because it acts as the end of the line or termination point
+- Because in case of failures this would bring inconvenience with the performance of the application.
+- Because, depending on the requirements, you would not always need the same characteristics, you probably only need processing or storage capacity on occasion.
