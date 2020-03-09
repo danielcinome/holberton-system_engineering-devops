@@ -1,1 +1,11 @@
 https://imgur.com/w8S0FcG
+- Well, once the user enters the URL the browser asks in DNS cache if the domain they are accessing is stored. If so,
+  it directly requests and directs the location of the web application otherwise on a DNS server and requests the domain address.
+- The load balancer is HAproxy which means it is a high availability and load balancing equlibrator.
+  The Least Connection First Scheduling algorithm allows me to balance the servers in an orderly manner, one after the other.
+  Additionally, it allows me to identify at what time one of the requests on the servers ends and send the next one to that one.
+- It works in an Active-Active way since load balancing I am doing it proportionally. The main difference is that the passive waits
+  until the Active server is full of requests, or when there is some kind of sudden, or scheduled, failure.
+- It allows me to have a backup as part of performance or a solution to alleviate system failures.
+- Load balancing allows me to have a much more stable system, in case of failure in one of the servers the application is backed by the other to continue working
+- If there are, the connection is exposed to any type of injection or loss of information.
