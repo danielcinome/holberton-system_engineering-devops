@@ -2,7 +2,6 @@
 # Double the number of webservers
 sudo apt-get -y update
 sudo apt-get -y install nginx
-sudo ufw allow 'Nginx HTTP'
 sudo echo "Holberton School" | sudo tee /var/www/html/index.html
 sudo sed -i "11i add_header X-Served-By $HOSTNAME;\n" /etc/nginx/nginx.conf
 sudo service nginx reload
