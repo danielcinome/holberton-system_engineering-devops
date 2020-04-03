@@ -3,5 +3,5 @@
 sudo apt-get -y update
 sudo apt-get -y install nginx
 sudo echo "Holberton School" | sudo tee /var/www/html/index.html
-sudo sed -i "11i add_header X-Served-By $HOSTNAME;\n" /etc/nginx/nginx.conf
+sed -i '/sendfile on;/a add_header X-Served-By $HOSTNAME;' /etc/nginx/nginx.conf
 sudo service nginx reload
