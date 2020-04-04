@@ -5,12 +5,12 @@ sudo apt-get install haproxy=1.6.\*
 sudo chmod -R 777 /etc/haproxy/
 sudo echo '
 frontend firstbalance
-     bind *:80
-     mode http
-     default_backend webs
+      bind *:80
+      mode http
+      default_backend webs
 backend webs
-   balance roundrobin
-   mode http
-   server 1173-web-01 35.243.187.246:80 check
-   server 1173-web-02 3.85.202.216:80 check' >> /etc/haproxy/haproxy.cfg
+      balance roundrobin
+      mode http
+      server 1173-web-01 35.243.187.246:80 check
+      server 1173-web-02 3.85.202.216:80 check' >> /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
