@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Run Nginx as Nginx
+/usr/sbin/nginx -c /etc/nginx/nginx.conf
