@@ -25,7 +25,6 @@ if __name__ == '__main__':
             lis.append(dic)
             dic = {}
         dic_dic[id_user] = lis
-        print(len(lis))
 
     with open('todo_all_employees.json', mode='w') as f:
         json.dump(dic_dic, f)
