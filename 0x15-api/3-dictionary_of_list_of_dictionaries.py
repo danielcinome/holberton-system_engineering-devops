@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ API """
-import csv
 import json
 import requests
 import sys
