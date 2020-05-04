@@ -23,4 +23,4 @@ if __name__ == '__main__':
           count,
           len(req_todo)))
     for val in task:
-        print(' \t{}'.format(val))
+        print('\t {}'.format(val))
