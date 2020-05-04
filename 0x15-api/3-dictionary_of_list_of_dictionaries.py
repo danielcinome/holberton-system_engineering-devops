@@ -8,8 +8,8 @@ import sys
 if __name__ == '__main__':
     dic = {}
     dic_dic = {}
-    lis = []
     for id_user in range(1, 11):
+        lis = []
         url = 'https://jsonplaceholder.typicode.com/users/' +\
               str(id_user) + '/todos'
         url_user = 'https://jsonplaceholder.typicode.com/users/' + str(id_user)
@@ -25,6 +25,7 @@ if __name__ == '__main__':
             lis.append(dic)
             dic = {}
         dic_dic[id_user] = lis
+        print(len(lis))
 
     with open('todo_all_employees.json', mode='w') as f:
         json.dump(dic_dic, f)
