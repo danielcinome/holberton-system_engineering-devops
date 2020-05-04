@@ -22,6 +22,7 @@ if __name__ == '__main__':
         dic['completed'] = line['completed']
         dic['username'] = req_user['username']
         lis.append(dic)
+        dic = {}
 
     with open(id_user + '.json', mode='w') as f:
         json.dump({id_user: lis}, f)
