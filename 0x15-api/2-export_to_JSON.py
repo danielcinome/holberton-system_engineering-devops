@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """ API """
 import csv
+import json
 import requests
 import sys
-import json
 
 
 if __name__ == '__main__':
