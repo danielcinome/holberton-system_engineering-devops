@@ -3,10 +3,10 @@
 import requests
 
 
-def recurse(subreddit, hot_list=[], url=
-            'https://www.reddit.com/r/{}/hot.json'):
+def recurse(subreddit, hot_list=[], after=''):
     """  Recurse it!  """
-    url = url.format(subreddit)
+    url = 'https://www.reddit.com/r/{}/\
+hot.json?after={}'.format(subreddit, after)
     tok = {'user-agent': 'X-Modhash'}
     req = requests.get(url, headers=tok)
     if req.history or req.status_code == 404:
@@ -18,7 +18,6 @@ def recurse(subreddit, hot_list=[], url=
         for title in req:
             title = title.get('data').get('title')
             hot_list.append(title)
-        return recurse(subreddit, hot_list,
-                       'https://www.reddit.com/r/{}/hot.json?after=' + after)
+        return recurse(subreddit, hot_list, after)
     else:
         return hot_list
